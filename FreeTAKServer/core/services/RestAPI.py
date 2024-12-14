@@ -303,6 +303,7 @@ def systemUsers(empty=None):
 
 @app.route('/ManageSystemUser/getAll', methods=["GET"])
 @auth.login_required
+
 def getSystemUsersRest():
     """ wrapper around the updateSystemUser function for Rest API
     """
@@ -1978,12 +1979,13 @@ class RestAPI(DigitalPyService, FlaskView):
 
     def startup(self, APIPipea, CommandPipea, IP, Port, starttime, service_id: str, subject_address: str, subject_port: int, subject_protocol, integration_manager_address: str, integration_manager_port: int, integration_manager_protocol: str, formatter: Formatter):
         print('running api')
+        print(Port)
         init_config()
         global APIPipe, CommandPipe, StartTime
         StartTime = starttime
         APIPipe = APIPipea
         CommandPipe = CommandPipea
-        socketio.run(app, host=IP, port=Port)
+        socketio.run(app, host=IP, port=Port, ssl_context='adhoc')
         # try below if something breaks
         # socketio.run(app, host='0.0.0.0', port=10984, debug=True, use_reloader=False)
 

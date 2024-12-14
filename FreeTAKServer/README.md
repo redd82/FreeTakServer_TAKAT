@@ -2,7 +2,7 @@
 
 ![the Parrot is not dead](https://github.com/Tapawingo/FreeTakServer/blob/master/docs/FreeTakServer%20specs/FreeTakServerLogo.png?raw=true)
 
-Welcome to the FreeTakServer (FTS) git repository.
+Welcome to the FreeTakServer (FTS) git repository. TAKAT version.
 
 FTS is a Python3 implementation of the TAK Server for devices like CivTAK , WinTAK and ITAK, it is cross-platform. We use the Flask framework for web services.
 it's free and open source (released under the Eclipse Public License).
