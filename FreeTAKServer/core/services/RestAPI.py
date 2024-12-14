@@ -1985,7 +1985,7 @@ class RestAPI(DigitalPyService, FlaskView):
         StartTime = starttime
         APIPipe = APIPipea
         CommandPipe = CommandPipea
-        socketio.run(app, host=IP, port=Port, ssl_context='adhoc')
+        socketio.run(app, host=IP, port=Port, ssl_context=Port)
         # try below if something breaks
         # socketio.run(app, host='0.0.0.0', port=10984, debug=True, use_reloader=False)
 
